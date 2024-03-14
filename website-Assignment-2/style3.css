@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Mochiy+Pop+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    background-color: #f1f0f0;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+.navbar a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    position: relative;
+}
+
+.navbar .logo img {
+    max-height: 40px;
+    max-width: 100%;
+    height: auto;
+}
+
+.navbar a:not(.logo)::before,
+.navbar a:not(.logo)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #333;
+    transition: width 0.3s ease;
+}
+
+.navbar a:not(.logo)::before {
+    transform: translateX(-50%);
+}
+
+.navbar a:not(.logo)::after {
+    transform: translateX(-50%);
+}
+
+.navbar a:not(.logo):hover::before,
+.navbar a:not(.logo):hover::after {
+    width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar a {
+        margin-bottom: 10px;
+    }
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.maintenance-image {
+    width: 200px;
+}
+
+.message {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .maintenance-image {
+        width: 150px;
+    }
+
+    .message {
+        font-size: 18px;
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #5dbcf3;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.footer-links-row ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links-row ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer-links-row ul li:last-child {
+    margin-right: 0;
+}
+
+.footer-links-row ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p {
+    margin-top: 20px;
+}
